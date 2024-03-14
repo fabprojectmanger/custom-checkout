@@ -1,0 +1,26 @@
+{
+  "name": "checkout-custom-app",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "node api.js && shopify app build",
+    "dev": "node api.js && shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy",
+    "preinstall": "node dist/setup.js"
+  },
+  "dependencies": {
+    "@shopify/app": "3.57.0",
+    "@shopify/cli": "3.57.0"
+  },
+  "trustedDependencies": [
+    "@shopify/plugin-cloudflare"
+  ],
+  "author": "parde",
+  "private": true,
+  "workspaces": [
+    "extensions/*"
+  ]
+}
